@@ -50,9 +50,6 @@ JavaScript is a programming language that enables interactive web pages. It is a
 - **DOM Manipulation:** [JavaScript DOM Tutorial](https://www.javascripttutorial.net/javascript-dom/)
 
 
-
 Stay tuned for upcoming weeks where we'll explore more advanced web development topics!
 
 ---
-
-*This curriculum was prepared for COPS Summer of Code 2025. For any queries or clarification, please contact the program coordinators.*
