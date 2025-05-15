@@ -1,4 +1,4 @@
-# COPS Summer of Code 2025 - Web Track
+# <img src="https://avatars.githubusercontent.com/u/38392463?s=200&v=4" height=40></img> COPS SDG Summer of Code 2025 - Web Track
 
 ## Pre-requisites
 
@@ -11,7 +11,7 @@ Git is a distributed version control system that allows developers to track chan
 - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 
-## Week 1 (WEB DEV BASICS)
+# Week 1
 
 ### <img src="https://devicon-website.vercel.app/api/html5/original.svg" height=25></img> HTML (HyperText Markup Language)
 
@@ -37,7 +37,7 @@ Tailwind CSS is a utility-first CSS framework that provides low-level utility cl
 - **Tutorial:** [Tailwind CSS Tutorial](https://youtu.be/-g969furGik?si=l8-GHwgiJmh3K2WL)
 - **Documentation:** [Tailwind CSS Docs](https://tailwindcss.com/)
 
-### > ***HTML + CSS Lecture Series:** [Yt Playlist(L1 - L50](https://youtu.be/-g969furGik?si=l8-GHwgiJmh3K2W)*
+### > ***HTML + CSS Lecture Series:** [Yt Playlist(L1 - L50)](https://youtu.be/-g969furGik?si=l8-GHwgiJmh3K2W)*
 
 ### <img src="https://devicon-website.vercel.app/api/javascript/original.svg" height=25></img> JavaScript
 
