@@ -1,67 +1,72 @@
-# <img src="https://devicon-website.vercel.app/api/bitcoin/original.svg" height=40></img> COPS SDG Summer of Code 2025 - Web3 Week 1: Bitcoin Core
-
-## Pre-Week Warmup
-- Install [Bitcoin Core](https://bitcoin.org/en/download) (testnet mode)
-- Create a [blockchain.com explorer](https://www.blockchain.com/explorer) account
+# <img src="https://avatars.githubusercontent.com/u/38392463?s=200&v=4" height=40></img> COPS SDG Summer of Code 2025 - Web3 Week 1
 
 ---
 
-# Day 1-3: Foundations
+# Foundations
 
-### <img src="https://devicon-website.vercel.app/api/bitcoin/original.svg" height=25></img> Blockchain Essentials
-**What you'll learn:**  
-Decentralization, Cryptographic Hashing, Consensus Mechanisms
+### Blockchain Essentials
 
 **Resources:**  
-- **[Video Lectures]** [Blockchain Technology Playlist](http://youtube.com/watch?v=lUTv9NHkuR4&list=PLlzIv5W0T83BPJqonIRMf-lV7K7E06qyY&index=3) (Watch L1-L5)
-- **[Whitepaper]** [Bitcoin: Sections 1-5](https://bitcoin.org/bitcoin.pdf) (Introduction to Transactions)
+- [Video Lectures](http://youtube.com/watch?v=lUTv9NHkuR4&list=PLlzIv5W0T83BPJqonIRMf-lV7K7E06qyY&index=1)
+- [Satoshi Nakamoto Whitepaper](https://bitcoin.org/bitcoin.pdf)
 
 ---
 
-# Day 4-5: Bitcoin Mechanics
+# Bitcoin Mechanics
 
-### <img src="https://devicon-website.vercel.app/api/bookstack/original.svg" height=25></img> Transaction Lifecycle
-**What you'll learn:**  
-UTXO Model, Digital Signatures, ScriptPubKey
+### Transaction Lifecycle
 
 **Resources:**  
-- **[Video]** [But How Does Bitcoin Actually Work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=219s) (Full Video)
-- **[Book]** [Grokking Bitcoin: Ch 3-4](https://rosenbaum.se/book/grokking-bitcoin.html) (Keys & Transactions)
+- [But How Does Bitcoin Actually Work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4&t=219s)
+- [Grokking Bitcoin](https://rosenbaum.se/book/grokking-bitcoin.html)
 
 ---
 
-# 🎯 Week 1 Assignment: Transaction Dissector 
+# 🎯 Week 1 Assignment: Cryptographic Proof Simulator
 
 ## 📌 Problem Statement  
-Reverse-engineer **ONE real Bitcoin transaction** from the blockchain. Create a technical report explaining:  
+Create a Python script that **demonstrates** Bitcoin's cryptographic principles by:
 
-1. Inputs/Outputs (UTXO model)  
-2. ScriptSig and ScriptPubKey  
-3. Transaction fees calculation  
-4. Role of miners (confirmations)  
+1. Generating SHA-256 hashes for transaction data  
+2. Simulating digital signature creation/verification  
+3. Mapping concepts to real Bitcoin transactions  
 
-**Constraints:**  
-- Use only [blockchain.com explorer](https://www.blockchain.com/explorer) for data  
-- Cite explanations from *Satoshi Whitepaper Sections 1-5* and *Grokking Bitcoin Ch 3-4*  
+**Required Workflow:**  
+[Transaction Data] → [SHA-256 Hash] → [Signature Simulation] → [Verification]
 
 ## ✅ Deliverables  
-- `report.md` with:  
-  - Transaction ID analyzed  
-  - Screenshots of inputs/outputs  
-  - Code snippets (if any)  
-  - Whitepaper/book references  
-- Bonus: Raw transaction data in JSON  
+1. `crypto_demo.py` with:  
+```python
+import hashlib
+
+# 1. Hash Generator
+def create_tx_hash(tx_data):
+    return ...
+
+# 2. Signature Simulator
+def sign_transaction(private_key, tx_hash):
+    # Simulate signing using XOR (educational purpose only)
+    return ...
+
+# 3. Verification Check
+def verify_signature(public_key, signature, tx_hash):
+    # Simplified verification logic
+    return ...
+  ```
+2. `README.md` explaining:
+  - How SHA-256 protects transaction integrity
+  - Real-world signature process vs your simulation
 
 ## 🌟 Evaluation Criteria  
-- Accuracy of UTXO explanation  
-- Understanding of script operations  
-- Fee calculation methodology  
-- Clear whitepaper/book citations  
+- Working SHA-256 implementation
+- Clear understanding of signing/verification concepts
+- Accurate references to provided resources
+- Identification of real transaction components 
 
 ---
 
-# Survival Kit  
-- [Bitcoin CLI Cheatsheet](https://bitcointransactions.com/cheatsheet)  
-- [Transaction Decoder Tool](https://live.blockcypher.com/btc/decodetx/)  
+# Cryptography
+- [Transaction Decoder Tool](https://live.blockcypher.com/btc/decodetx/)
+- [Play with Cryptography](https://andersbrownworth.com/blockchain/hash).
 
 *"Bitcoin is the internet of money." - Andreas Antonopoulos*
