@@ -22,51 +22,83 @@
 
 ---
 
-# 🎯 Week 1 Assignment: Cryptographic Proof Simulator
-
-## 📌 Problem Statement  
-Create a Python script that **demonstrates** Bitcoin's cryptographic principles by:
-
-1. Generating SHA-256 hashes for transaction data  
-2. Simulating digital signature creation/verification  
-3. Mapping concepts to real Bitcoin transactions  
-
-**Required Workflow:**  
-[Transaction Data] → [SHA-256 Hash] → [Signature Simulation] → [Verification]
-
-## ✅ Deliverables  
-1. `crypto_demo.py` with:  
-```python
-import hashlib
-
-# 1. Hash Generator
-def create_tx_hash(tx_data):
-    return ...
-
-# 2. Signature Simulator
-def sign_transaction(private_key, tx_hash):
-    # Simulate signing using XOR (educational purpose only)
-    return ...
-
-# 3. Verification Check
-def verify_signature(public_key, signature, tx_hash):
-    # Simplified verification logic
-    return ...
-  ```
-2. `README.md` explaining:
-  - How SHA-256 protects transaction integrity
-  - Real-world signature process vs your simulation
-
-## 🌟 Evaluation Criteria  
-- Working SHA-256 implementation
-- Clear understanding of signing/verification concepts
-- Accurate references to provided resources
-- Identification of real transaction components 
-
----
-
 # Cryptography
 - [Transaction Decoder Tool](https://live.blockcypher.com/btc/decodetx/)
 - [Play with Cryptography](https://andersbrownworth.com/blockchain/hash).
 
 *"Bitcoin is the internet of money." - Andreas Antonopoulos*
+
+---
+
+# Week-1 Assignment: Bitcoin Cryptography Implementation Guide
+
+**Objective:**  
+Build a Python module demonstrating Bitcoin's core cryptographic operations with clear mapping to actual Bitcoin components.
+
+
+## Implementation Requirements
+
+### 1. Transaction Hasher (`create_tx_hash`)
+**Implement:**
+- Double SHA-256 hashing mimicking Bitcoin TXID generation
+- Input validation for transaction data format
+- Hex-to-bytes conversion matching Bitcoin's serialization
+
+
+
+### 2. Signature Simulator (`sign_transaction`)
+**Implement:**
+- ECDSA-like signature components (r, s) generation
+- Nonce generation with cryptographic safety
+- Message formatting using Bitcoin's sighash convention
+
+
+
+### 3. Verification Engine (`verify_signature`)
+**Implement:**
+- Signature parsing in DER format
+- Public key recovery from signature elements
+
+
+
+## Required Artifacts
+
+### `crypto_demo.py` Structure
+
+```python
+def create_tx_hash(tx_data: bytes) -> str:
+"""Implement Bitcoin-style double SHA-256 with TXID characteristics"""
+
+def sign_transaction(private_key: int, tx_hash: bytes) -> tuple:
+"""Produce ECDSA-like (r,s) signature components with nonce safety"""
+
+def verify_signature(pubkey: bytes, sig: tuple, tx_hash: bytes) -> bool:
+"""Replicate Bitcoin's verification logic with strict encoding checks"""
+```
+
+
+## Reference Links
+
+1. [Learn me a bitcoin](https://learnmeabitcoin.com/)
+2. [libsecp256k1 documentation](https://bitcoincore.org/en/secp256k1/)
+
+
+## Evaluation Criteria
+
+1. **Hashing**
+    - Correct double-SHA256 implementation matching TXID specs
+    - Proper byte ordering for Bitcoin data structures
+
+2. **Signature**
+    - Valid (r,s) component generation
+    - Nonce reuse protection mechanism
+
+3. **Verification**
+    - Strict encoding rule enforcement
+    - Public key recovery logic
+
+4. **Documentation**
+    - Clear explanation of your implementation
+
+---
+
