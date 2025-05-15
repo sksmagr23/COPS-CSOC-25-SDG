@@ -26,8 +26,6 @@
 - [Transaction Decoder Tool](https://live.blockcypher.com/btc/decodetx/)
 - [Play with Cryptography](https://andersbrownworth.com/blockchain/hash).
 
-*"Bitcoin is the internet of money." - Andreas Antonopoulos*
-
 ---
 
 # Week-1 Assignment: Bitcoin Cryptography Implementation Guide
@@ -102,3 +100,4 @@ def verify_signature(pubkey: bytes, sig: tuple, tx_hash: bytes) -> bool:
 
 ---
 
+*"Bitcoin is the internet of money." - Andreas Antonopoulos*
