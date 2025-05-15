@@ -49,6 +49,50 @@ JavaScript is a programming language that enables interactive web pages. It is a
 - **Documentation:** [JavaScript.info](https://javascript.info/)
 - **DOM Manipulation:** [JavaScript DOM Tutorial](https://www.javascripttutorial.net/javascript-dom/)
 
+--- 
+We recommend taking a quick look at the task given in our previous **TypeScript & JavaScript workshop**.  
+If you haven’t tried the task given there yet, feel free to give it a shot — it’s completely optional but helpful.  
+🔗 [Task Link Here](https://github.com/Abhishek-Punhani/TS-JS-Workshop-Submission)
+
+
+# 🎯 Week 1 Task – Mock Musical Instrument 🎶
+---
+
+## 📌 Problem Statement  
+Build a web-based **musical instrument** using **HTML, CSS, and JavaScript**.  
+The instrument should respond to key presses or clicks to play sounds, with appropriate visual feedback.
+
+---
+
+## ✅ Requirements
+- 🎛️ Design a musical instrument interface (e.g., piano, drums, guitar)
+- ⌨️ Map keyboard keys to play corresponding sounds
+- 🔊 Trigger audio playback using the Audio API
+- ✨ Provide visual feedback when keys are pressed
+- 📘 Include a guide/instruction section on how to use the site
+
+---
+
+## 🌟 Optional Enhancements
+- 🎨 CSS animations for key-press/play effects
+- 🥁 Support for multiple instruments
+- 🎤 Recording and download functionality (with or without microphone)
+- 📱 Responsive layout and/or dark mode toggle
+
+---
+
+## 📂 Deliverables
+Submit your project with the following structure:
+- `index.html`
+- `style.css` (We recommend to use Tailwind-CSS although its optional)
+- `script.js`
+- `/sounds/` (folder with instrument audio files)
+- Instructions section in-app or `README.md`
+
+---
+
+ Let the coding symphony begin! 🎼✨
+
 
 Stay tuned for upcoming weeks where we'll explore more advanced web development topics!
 
