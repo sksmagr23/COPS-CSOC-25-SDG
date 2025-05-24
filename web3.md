@@ -78,7 +78,7 @@ def verify_signature(pubkey: bytes, sig: tuple, tx_hash: bytes) -> bool:
 ## Reference Links
 
 1. [Learn me a bitcoin](https://learnmeabitcoin.com/)
-2. [libsecp256k1 documentation](https://bitcoincore.org/en/secp256k1/)
+2. [libsecp256k1 documentation](https://medium.com/coinmonks/introduction-to-blockchains-bedrock-the-elliptic-curve-secp256k1-e4bd3bc17d)
 
 
 ## Evaluation Criteria
