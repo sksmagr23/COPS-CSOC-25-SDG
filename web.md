@@ -97,3 +97,91 @@ Submit your project with the following structure:
 Stay tuned for upcoming weeks where we'll explore more advanced web development topics!
 
 ---
+
+# Week 2
+
+----
+### <img src="https://devicon-website.vercel.app/api/typescript/original.svg" height=25></img> TypeScript
+
+TypeScript is a strongly typed programming language that builds on JavaScript by adding static type definitions. It helps developers catch errors early through a type system and makes JavaScript development more robust and maintainable, especially for large applications.
+
+*Resources:*
+- *Official Docs:* [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/)
+- *One-Shot Tutorial:* [https://youtu.be/ZchBYjHFCC4?si=Ezr59GKIO6yYJm4J](https://youtu.be/ZchBYjHFCC4?si=Ezr59GKIO6yYJm4J)
+- *⭐ An insighful blog by our senior:* [https://blogs.copsiitbhu.co.in/learning-typescipt-advent-of-ts-24](https://blogs.copsiitbhu.co.in/learning-typescipt-advent-of-ts-24)
+- *Comprehensive Guide:* [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/)
+
+---
+### <img src="https://devicon-website.vercel.app/api/react/original.svg" height=25></img> React
+
+React is a popular JavaScript library for building user interfaces, particularly single-page applications. It uses a component-based architecture and virtual DOM to create efficient, interactive UIs. React's declarative approach makes it easier to reason about application state and UI updates.
+
+*Resources:*
+- *official Docs:* [https://react.dev/learn](https://react.dev/learn)
+- *One-Shot Tutorial:* [https://youtu.be/w7ejDZ8SWv8?si=xyz789abc123def4](https://youtu.be/w7ejDZ8SWv8?si=xyz789abc123def4)
+- *Lecture Series:* [Sigma web dev course L105 - L120](https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=bb2VIBVGPAaupfsL)
+- *Hooks Deep Dive:* [https://youtu.be/6wf5dIrryoQ?si=z5VAJheKtf2GVRhR](https://youtu.be/6wf5dIrryoQ?si=z5VAJheKtf2GVRhR)
+
+
+---
+### > **Useful cheat sheet :):* [https://drive.google.com/file/d/1fBhyoV5TL_o6TmRSPzT5u8sMbXTT-fSC/view?usp=drivesdk](https://drive.google.com/file/d/1fBhyoV5TL_o6TmRSPzT5u8sMbXTT-fSC/view?usp=drivesdk)*
+
+---
+#### React Ecosystem Essentials (Additional)
+- *State Management:* [Redux Toolkit](https://redux.js.org/)
+- *React Hook form:* [https://www.react-hook-form.com/get-started](https://www.react-hook-form.com/get-started)
+- *UI Libraries:* [Material-UI](https://mui.com/material-ui/getting-started/) | [Chakra UI](https://chakra-ui.com/)
+
+
+---
+
+
+# 🚀 Week 2 Task – Build Your Own SnippetHub! 🧠💻
+
+---
+Hey friends! 👋
+
+This week we have a really fun and useful project! It's called SnippetHub – like a special notebook just for cool links, code, notes, or files you want to save and use again later. 😄
+
+---
+
+## 📌 What you have to build:
+
+Make a little web app where you can:
+
+✅ Save things like links, text, code, or files  
+✅ Give them a name, category, and tag (like putting things in folders!)  
+✅ Make cards for each one so it's easy to see  
+✅ Click a card to open and edit it  
+✅ Drag them around to move or sort them  
+✅ Create new categories and sub-categories  
+✅ See your favorite ones on the sidebar (pin them!)  
+✅ See all your categories on one screen  
+✅ Make it look neat and super easy to use  
+
+---
+
+## ✨ Cool Extras You Can Try (Optional):
+
+🌈 Make it look beautiful with clean UI and some animations  
+🖱️ Drag and drop files right in to create new cards  
+🔍 Add search and filters so you can find your stuff quickly  
+📄 Add a download button for your files or code  
+👀 Let users choose to see the cards like a list or as blocks  
+🎨 You can use [TypeScript] and [ReactJS] – both are super cool!  
+🧠 Remember: No backend! Do everything with React states only!
+
+---
+
+## 📁 Your Project Should Include:
+
+- Sidebar with pinned categories  
+- Main area showing your snippets  
+- Page for full snippet view  
+- Ability to add, edit, delete, and reorder stuff  
+- Clean layout and responsive design
+
+---
+
+This tool is super useful for students and developers, and you'll love using it yourself! 😍  
+Now go code and have fun building your own SnippetHub! 🎉🚀
