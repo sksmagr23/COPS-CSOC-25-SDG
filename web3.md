@@ -277,3 +277,79 @@ Add these advanced features:
 ---
 
 *"Unlocking smart contracts is unlocking the future of programmable assets."*  
+
+---
+
+# <img src="https://avatars.githubusercontent.com/u/38392463?s=200&v=4" height=40></img> COPS SDG Summer of Code 2025 - Web3 Week 3
+
+---
+
+## 🚀 Web3 Development
+> Transition from browser-based tools to professional-grade development frameworks used by blockchain engineers
+
+### 🔗 **Ethers.js Mastery**
+The backbone of Ethereum interaction in JavaScript applications
+
+**Core Concepts:**
+- Providers (JsonRpcProvider, Web3Provider)
+- Signers (Wallet, JsonRpcSigner)
+- Contract abstraction
+- BigNumber operations
+- Event filtering
+
+**Resources:**
+- 📹 [Master Ethers.js Step-by-Step](https://www.youtube.com/watch?v=yk7nVp5HTCk&t=673s)
+- 📚 [Official Documentation](https://docs.ethers.org/v5/)
+
+---
+
+### ⚒️ **Hardhat Deep Dive**
+The professional Ethereum development environment
+
+**Key Features:**
+- Advanced testing framework
+- Solidity debugging
+- Plugin ecosystem
+- TypeScript support
+
+**Resources:**
+- 📹 [Hardhat Complete Playlist](https://www.youtube.com/playlist?list=PLgPmWS2dQHW9mucRpDVe16j9Qn74ZXqcD) -> Outdated But Learn To Use It From Here.
+- 📚 [Official Documentation](https://hardhat.org/docs)
+- 🧪 [Hardhat Testing Guide](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)
+
+---
+
+### 🌐 **Full-Stack DApp Development**
+Connecting smart contracts to modern web interfaces
+
+**Resource Collection:**
+- 📹 [Learn To Build DApp](https://www.youtube.com/watch?v=3681ZYbDSSk)
+- 📚 [Learn By Watching Tutorial](https://www.youtube.com/watch?v=8rhueOcTu8k&list=PLS5SEs8ZftgVV6ah1fo2IvlHk1kTCy6un&index=1)
+- 🧭 [DApp Architecture Patterns](https://ethereum.org/en/developers/docs/dapps/)
+- 🔐 [Wallet Integration Best Practices](https://docs.metamask.io/guide/create-dapp.html)
+
+---
+
+## 🧪 Week 3 Assignment: Create A DApp.
+
+Create ANY decentralized application of your choice that:
+
+- Connects to Ethereum blockchain
+
+- Uses at least one smart contract
+
+- Has a functional frontend
+
+- Solves a real problem or provides entertainment
+---
+
+## 📝 Submission Guidelines
+
+1. **Code Repository**
+
+2. **ReadMe Updated**
+
+3. **Video Demo (3-5 minutes)**
+---
+
+## Happy Learning
