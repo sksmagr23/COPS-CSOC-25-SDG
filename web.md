@@ -185,3 +185,259 @@ Make a little web app where you can:
 
 This tool is super useful for students and developers, and you'll love using it yourself! 😍  
 Now go code and have fun building your own SnippetHub! 🎉🚀
+
+----
+
+# Week 3
+
+----
+
+In Weeks 1 and 2, we focused on the **frontend** - what users see and interact with directly in their browsers. We built UI components with HTML/CSS and added interactivity with JavaScript, React, and TypeScript. However, our applications were limited - they couldn't:
+
+- Store data persistently (data disappeared on page refresh)
+- Authenticate users securely
+- Enable real-time collaboration
+- Scale to handle multiple users
+
+This is where **backend development** comes in. The backend is the "server-side" of web applications - it handles data storage, business logic, authentication, and communication between users.
+
+### <img src="https://devicon-website.vercel.app/api/nodejs/original.svg" height=25></img> Backend Fundamentals
+
+Backend systems typically consist of:
+> **Server**: Processes requests from clients (browsers) <br>
+> **Application Logic**: Handles business rules and data processing <br>
+> **Database**: Stores application data persistently <br>
+> **APIs**: Interfaces that let the frontend communicate with the backend <br>
+
+*Resources:*
+- *REST API Basics:* [https://youtu.be/-mN3VyJuCjM?si=46wRHANHh8-KOGnA](https://youtu.be/-mN3VyJuCjM?si=46wRHANHh8-KOGnA)
+- *Backend Architecture Overview:* [https://youtu.be/XBu54nfzxAQ?si=f0RxluYBKOO2qdCM](https://youtu.be/XBu54nfzxAQ?si=f0RxluYBKOO2qdCM)
+
+---
+
+### <img src="https://devicon-website.vercel.app/api/nodejs/plain-wordmark.svg" height=30></img> Node & Express
+
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows you to run JavaScript on the server. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+> If node is still not installed in your system, visit [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+*Resources:*
+- *Node.js Official Docs:* [https://nodejs.org/docs/latest/api/](https://nodejs.org/docs/latest/api/)
+- *Express Docs:* [https://expressjs.com/](https://expressjs.com/)
+- *Complete Tutorial:* [https://youtu.be/Oe421EPjeBE](https://youtu.be/Oe421EPjeBE)
+- *REST APIs with Express:* [https://youtu.be/l8WPWK9mS5M?si=rYenFgSelKJIcRGZ](https://youtu.be/l8WPWK9mS5M?si=rYenFgSelKJIcRGZ)
+
+> For API testing, either you can use [Postman](https://www.postman.com/) or [Thunder client extension(in VS code)](https://docs.thunderclient.com/)
+
+---
+
+### <img src="https://devicon-website.vercel.app/api/flask/original.svg?color=%23FFFFFF" height=25></img> Flask (Alternative)
+
+Flask is a lightweight web application framework for Python. It's designed to make getting started quick and easy, with the ability to scale up to complex applications.
+
+*Resources:*
+- *Official Docs:* [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
+- *One-shot Tutorial:* [https://youtu.be/Qr4QMBUPxWo?si=2WCXwr39Ow2YLfGy](https://youtu.be/Qr4QMBUPxWo?si=2WCXwr39Ow2YLfGy)
+- *Flask RESTful APIs:* [https://youtu.be/GMppyAPbLYk](https://youtu.be/GMppyAPbLYk)
+
+---
+
+### <img src="https://devicon-website.vercel.app/api/mongodb/original.svg" height=25></img> Databases
+
+Databases store your application data persistently. For web applications, you can choose between SQL databases (like PostgreSQL) and NoSQL databases (like MongoDB).
+
+MongoDB is a popular NoSQL database that stores data in flexible, JSON-like documents. Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that provides a schema-based solution to model your application data.
+
+**Models in Mongoose:**
+- Models are fancy constructors compiled from Schema definitions
+- They represent documents which can be saved and retrieved from the database
+- Models handle the creation, reading, updating, and deletion of documents
+
+*Resources:*
+- *MongoDB Tutorial:* [https://youtu.be/J6mDkcqU_ZE?si=-CqaPZvkZE-wBahp](https://youtu.be/J6mDkcqU_ZE?si=-CqaPZvkZE-wBahp)
+- *Official Mongoose Docs:* [https://mongoosejs.com/docs/](https://mongoosejs.com/docs/)
+- *Mongoose Models Tutorial:* [https://youtu.be/DZBGEVgL2eE](https://youtu.be/DZBGEVgL2eE)
+
+> ### Alternative
+PostgreSQL <img src="https://devicon-website.vercel.app/api/postgresql/original.svg" height=15></img> is a powerful, open-source object-relational database system with over 30 years of active development. It's known for reliability, feature robustness, and performance. PostgreSQL provides strong data integrity, extensibility, and is fully ACID compliant, making it ideal for complex web applications.
+
+**Key Features:**
+- Advanced data types and full-text search
+- Multi-version concurrency control (MVCC)
+- Foreign keys, joins, views, triggers, and stored procedures
+- Support for JSON and other NoSQL features
+
+*Resources:*
+- *PostgreSQL Official Docs:* [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+- *PostgreSQL Tutorial:* [https://youtu.be/qw--VYLpxG4](https://youtu.be/qw--VYLpxG4)
+- *Node.js with PostgreSQL:* [https://node-postgres.com/](https://node-postgres.com/)
+- *Sequelize ORM:* [https://sequelize.org/](https://sequelize.org/)
+
+---
+
+### 🔐 Authentication & Security
+
+Authentication verifies user identity, while authorization determines what resources a user can access.
+
+*Resources:*
+- *JWT Authentication:* [https://youtu.be/7Q17ubqLfaM](https://youtu.be/7Q17ubqLfaM)
+- *OAuth 2.0:* [https://youtu.be/996OiexHze0](https://youtu.be/996OiexHze0)
+- *Auth setup using Node.js:* [https://youtu.be/OWeruyqhiTo?si=EiaA9jZxFClYgBxM](https://youtu.be/OWeruyqhiTo?si=EiaA9jZxFClYgBxM)
+
+---
+
+### 🔄 WebSockets & Real-Time Features
+
+WebSockets enable real-time, bidirectional communication between clients and servers.
+
+*Resources:*
+- *Related blog:* [https://www.altexsoft.com/blog/websockets/](https://www.altexsoft.com/blog/websockets/)
+- *WebSockets Basics:* [https://youtu.be/2Nt-ZrNP22A](https://youtu.be/2Nt-ZrNP22A)
+- *Socket.IO Docs:* [https://socket.io/docs/v4/](https://socket.io/docs/v4/)
+- *Socket.io Tutorial:* [https://youtu.be/ZKEqqIO7n-k?si=hIdLbPa_-t13KmZB](https://youtu.be/ZKEqqIO7n-k?si=hIdLbPa_-t13KmZB)
+- *Alternative - (Flask-SocketIO):* [https://flask-socketio.readthedocs.io/en/latest/](https://flask-socketio.readthedocs.io/en/latest/)
+
+---
+
+### 🔌 Connecting Frontend to Backend
+
+Learning how to connect your React(or any other framework) frontend to your backend is crucial for full-stack development.
+
+*Resources:*
+- *API Integration with frontend:* [https://youtu.be/w3vs4a03y3I](https://youtu.be/w3vs4a03y3I)
+- *Data Fetching/parsing:* [https://youtu.be/5TxF9PQaq4U?si=-6IHObMahX4TWK97](https://youtu.be/5TxF9PQaq4U?si=-6IHObMahX4TWK97)
+- *CORS Explained:* [https://youtu.be/PNtFSVU-YTI?si=R7hlgN-Ry2wnF-vc](https://youtu.be/PNtFSVU-YTI?si=R7hlgN-Ry2wnF-vc)
+
+---
+
+### 🔒 Environment Variables
+
+Environment variables are key-value pairs stored outside your application code that can be accessed at runtime. They're essential for:
+- Storing sensitive information (API keys, database credentials)
+- Configuring application behavior across environments (development, staging, production)
+- Keeping secrets out of version control
+
+
+**⚠️ Important: NEVER commit your .env files to Git!**
+> Always add `.env` to your `.gitignore` file:
+
+### 🚀 Deployment
+
+Deployment is the process of making your application available to users on the internet. It involves setting up your code on servers that are accessible to the public.
+
+#### Frontend Deployment
+- **Vercel**: Perfect for React, Next.js, Vue, and other JavaScript frameworks; offers automatic deployments from Git
+- **Netlify**: Similar to Vercel with great CI/CD pipeline and form handling
+- **Cloudflare Pages**: Fast global CDN with free tier and built-in analytics
+
+#### Backend Deployment
+- **Render**: Easy deployment for Node.js, Python, Ruby and more with free tier
+- **Railway**: Developer-friendly platform with automatic deployments and scaling
+- **Fly.io**: Deploy full-stack apps globally with simple configuration
+- **AWS Lambda**: Serverless computing (pay only when your code runs)
+- **DigitalOcean App Platform**: Simplified PaaS built on their infrastructure
+
+#### Database Deployment
+- **MongoDB Atlas**: Cloud MongoDB service with free tier
+- **Supabase**: Open source Firebase alternative with PostgreSQL
+- **PlanetScale**: MySQL-compatible serverless database platform
+
+---
+
+# 🔐 Week 3 Task – Powering Up SnippetHub with Backend, Auth, and Real-Time Collaboration 🚀
+
+## 🧠 Objective:
+
+In Week 3, you’ll evolve your SnippetHub into a **production-ready full-stack app** with secure accounts, database storage, real-time collaboration, and shareable content.
+
+---
+
+## 🔧 Core Features to Implement:
+
+### ✅ Backend Integration
+- Use **Express.js (Node.js)** or **Flask (Python)** as your backend framework.
+- Set up **RESTful APIs** to handle:
+  - Snippets
+  - Categories & Subcategories
+  - User accounts
+  - Collaborative collections
+- Use a **database** (e.g., PostgreSQL, MongoDB) to persist all app data.
+
+---
+
+### 👤 Authentication & Security
+- Implement **User Authentication** using JWT or session-based auth.
+- Add **2-Factor Authentication (2FA)** (email-based or authenticator app).
+- Support **Private & Public snippets/collections** with access control.
+- Allow users to:
+  - Generate **public read-only links**
+  - Generate **private invite-only links**
+
+---
+
+## 📡 Real-Time Collaboration (WebSockets Required)
+- Use **WebSockets** (e.g., with Socket.IO or Flask-SocketIO) to build:
+  - Real-time collaborative editing of collections
+  - Presence detection: show active collaborators in a collection
+  - Real-time syncing of card order, content edits, and comments
+  - Optional: typing indicators and change notifications
+
+---
+
+## 🔗 Shareable URLs
+- Generate **unique, secure URLs** for:
+  - Public snippet views
+  - Private collection invites (collab access)
+- Private links should:
+  - Be valid for limited time or require login
+  - Offer view/edit permissions
+
+---
+
+## 🛠️ Functional Requirements:
+- Drag-and-drop support for snippet/file uploads
+- On-the-fly category/subcategory creation
+- Toggle between card view and list view
+- Download any snippet or file
+- Fully editable snippet cards (modal or detail page)
+- Smooth front-to-back integration (React + TypeScript + your backend)
+- Responsive, modern, and intuitive UI
+
+---
+
+## 🚀 Deployment
+- Deploy your **frontend** (e.g., on Vercel/Netlify)
+- Deploy your **backend** (e.g., on Render, Railway, or Fly.io)
+- Use **Supabase, PlanetScale, MongoDB Atlas**, or any cloud DB
+- Provide a **live working deployment link** in your README
+
+---
+
+## 🏆 Bonus Points (Additional Perks!)
+Special credits for creativity and useful enhancements like:
+
+- 🌈 Beautiful CSS transitions & animations
+- 📑 Export snippets as Markdown or PDF
+- 🔍 Advanced filtering & fuzzy search
+- 🛠️ Plugin support for extensibility
+- 👥 GitHub/Google OAuth
+- 🎨 Dark mode / Theme customization
+- 📈 Analytics on usage & contributions
+- 🎥 Demo video or GIF in README
+
+---
+
+## 📦 Deliverables:
+- GitHub repo with `/client` and `/server` structure
+- Clear `README.md` with:
+  - Setup instructions
+  - Feature overview
+  - Live demo link (mandatory)
+  - Screenshots or video walkthrough
+
+---
+
+🎯 **Goal**: Build a collaborative, secure, and real-time web tool that developers can use to manage and share their code snippets — SnippetHub should feel professional, reliable, and delightful to use.
+
+---
+
+**Let your creativity shine — bonus perks await for those who go beyond!** ✨
