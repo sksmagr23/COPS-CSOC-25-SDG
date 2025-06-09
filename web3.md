@@ -353,3 +353,108 @@ Create ANY decentralized application of your choice that:
 ---
 
 ## Happy Learning
+
+---
+# ⚒️ Week 4: From Local IDE to Testnet (with a Taste of ZK)
+
+Welcome to **Week 4** of **COPS SDG Summer of Code 2025 – Web3**!  
+This week we’ll move your Solidity work out of the browser and into your **local IDE** using **Hardhat**, deploy to a public testnet, hook up a simple frontend, and get your first glimpse of **Zero‑Knowledge**.
+
+---
+
+## 📖 Overview
+
+- **Local Dev Workflow**  
+  - Install and configure Hardhat in VS Code (or your IDE)  
+  - Write, compile, test, and debug contracts locally  
+
+- **Testnet Deployment**  
+  - Configure Holesky networks in your project  
+  - Deploy your contracts with a script  
+  - Verify on Etherscan  
+
+- **Frontend Integration**  
+  - Connect Ethers.js + MetaMask to your deployed contract  
+  - Read state and send transactions from a minimal UI  
+
+- **Zero‑Knowledge Intro**  
+  - Understand why ZK proofs matter for privacy & scalability  
+  - Try a toy ZK circuit or verifier in your project  
+
+---
+
+## 🛠 Part 1: Local Hardhat Setup
+
+1. **Initialize a Hardhat project** in your IDE  
+2. **Explore** the sample contract and script that Hardhat creates  
+3. **Compile**, **run a local node**, and **deploy** to your own localhost network  
+4. **Debug** using console logs and the Hardhat console
+
+---
+
+## 🌐 Part 2: Deploying to a Public Testnet
+
+1. **Obtain test ETH** from Holesky
+2. **Add network settings** (RPC URL, private key) to your Hardhat config  
+3. **Run your deployment script** to publish contracts to Goerli/Mumbai  
+4. **Verify** your contract on a block explorer and review its transactions
+
+---
+
+## 🌐 Part 3: Frontend Connection
+
+1. **Scaffold a minimal UI** (HTML + JS or React)  
+2. **Instantiate Ethers.js** with MetaMask as provider  
+3. **Read data** (e.g. total supply, a stored message) from your contract  
+4. **Send a transaction** (e.g. mint a token, cast a vote) via the UI  
+
+---
+
+## 🧠 Part 4: Bonus Zero‑Knowledge Exploration
+
+- **Why ZK?** Privacy in voting, private identity, rollups  
+- **Concepts to know**: circuit → proof → on‑chain verifier  
+- **Try a toy demo**: generate a simple “I know a secret” proof and deploy its verifier alongside your main contract  
+- **Tool suggestions**: Circom + SnarkJS, Noir, zk‑kit
+
+---
+
+## 🎨 Easy Project Themes
+
+Pick one of these, deploy it, and connect it in a tiny frontend:
+
+- **Token Faucet** – let any address claim a few tokens once  
+- **Mini Voting DApp** – users create proposals & cast votes on‑chain  
+- **On‑chain Notepad** – store short messages in the contract  
+- **Tip Jar** – send ETH or tokens as tips to a designated address  
+
+---
+
+## 📚 Key Resources
+
+- **Hardhat Guide** → hardhat.org/getting‑started  
+- **Deploying to Networks** → hardhat.org/hardhat‑runner/docs/guides/deploying  
+- **Ethers.js Docs** → docs.ethers.org  
+- **Holesky Faucet** → [Holesky](https://cloud.google.com/application/web3/faucet/ethereum/holesky)  
+- **Intro to ZK** → zkhack.dev / docs.circom.io  
+
+---
+
+## ✅ Submission Checklist
+
+- **Short project description** in your README  
+- **Deployed contract address** on Holesky 
+- **GitHub repo** containing:  
+  - `contracts/` (your Solidity files)  
+  - `scripts/` (deployment script)  
+  - `frontend/` (minimal UI)  
+- **2–4 min demo video** showing:  
+  - Local compile & test  
+  - Deployment to testnet  
+  - UI interaction  
+  - (Optional) ZK demo  
+
+---
+
+🔥 You’re now bridging local development, testnet deployment, frontend integration, and next‑gen ZK concepts. Let’s ship your first real‑world Web3 project! 🚀  
+
