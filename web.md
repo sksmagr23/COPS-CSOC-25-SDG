@@ -440,4 +440,154 @@ Special credits for creativity and useful enhancements like:
 
 ---
 
-**Let your creativity shine — bonus perks await for those who go beyond!** ✨
+# Week 4
+
+Hey folks! Welcome to Week 4! This week, we’re diving into advanced topics like Redis, caching, and Nginx. In this task update, you'll see how to integrate these concepts into your existing Week 3 SnippetHub project (or you can apply them to any project, such as a travel booking site). The goal is to boost performance, improve scalability, and ensure that data is served rapidly while reducing load on your database.
+
+**Disclaimer:** Week 4 tasks are _totally optional_! If you're still tackling previous weeks' tasks, focus on wrapping those up first. But if you're done and dusted with earlier work and ready to take things up a notch—let’s dive into some performance and scalability upgrades! 🚀
+
+---
+
+## 🚀 Why Caching Matters
+
+Caching can greatly speed up web applications by reducing the overhead of repeatedly fetching or computing the same data. By storing frequently accessed data in a faster, in-memory storage, you can drastically improve response times. 
+
+For example, the first time a user requests a resource (say, all snippets), the caching server checks if the key (e.g., `"all_snippets"`) exists. If not, it queries the database, caches the result, and returns it to the user. Subsequent requests hit the cache directly, reducing the load on your database and providing lightning-fast responses.
+
+**Important Note:** Always ensure that whenever the underlying data is updated (like when a snippet is edited or deleted), you remove or invalidate the associated cache keys. This prevents stale data from being returned.
+
+---
+
+## 🔍 Client-Side vs. Server-Side Caching
+
+- **Client-Side Caching:**  
+  Data is stored on the client (e.g., the browser's cache or localStorage). This reduces network requests and speeds up page loading. However, this data can become outdated if the server-side data changes.
+
+- **Server-Side Caching:**  
+  Data is stored on the server using systems like Redis or Memcached. This type of caching reduces repeated database hits and speeds up the response time for API calls. Effective cache invalidation is crucial, so stale data isn’t served.
+
+---
+
+## 🛠️ Caching Platforms: Kafka, Redis, and More
+
+Various platforms can act as caching mechanisms:
+- **Kafka:** While mainly used for real-time data streams and message queuing, it is less common for direct data caching.
+- **Redis:** A popular in-memory data store, ideal for fast read/write operations with support for multiple data structures (strings, hashes, lists, sets, etc.).
+- **Memcached:** Another well-known in-memory key-value store.
+
+Let's focus on **Redis** in this task.
+
+**Video Reference:**  
+- [Redis Crash Course](https://www.youtube.com/watch?v=jgpVdJB2sKQ)
+
+**Further Resources:**  
+- [Redis Docs](https://redis.io/docs/latest/)  
+- [A good Article on Medium](https://medium.com/@gferowich/how-to-implement-query-caching-with-redis-express-node-js-and-react-3a4c4b530c6)
+
+---
+
+## 🔧 Setting Up Redis
+
+Here’s how you can set up and integrate Redis in your project:
+
+1. **Installation:**  
+   Install Redis locally via your package manager or download an installer. Alternatively, use a hosted Redis service from providers like AWS, Azure, or Heroku.
+
+2. **Configuration:**  
+   Edit the `redis.conf` file to adjust settings such as maximum memory, eviction policy, and data persistence options.
+
+3. **Integration:**  
+   Use a Redis client library to connect to the Redis server. Common operations include setting a key (with an expiry if desired), getting a key, and deleting a key. For instance, in Python you might do the following:
+
+```python title=redis_example.py
+import redis
+
+# Connect to Redis server (defaults to localhost:6379)
+r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+
+# Set a key for cached snippets with an expiry of 60 seconds
+r.set('all_snippets', 'cached_data_here', ex=60)
+
+# Retrieve the cached snippets
+data = r.get('all_snippets')
+print(data)
+
+# Delete the key when snippet data is updated to avoid stale cache
+r.delete('all_snippets')
+```
+--- 
+## 🌐 Nginx & Server Splitting
+
+As your application scales, a single server instance might be overwhelmed by high volumes of traffic. A robust strategy is to split your backend into different services. For example, you might separate your backend into an **Auth Server** (handling user authentication) and a **Service Server** (handling snippets and core functionalities).
+
+**Nginx** plays a crucial role here:
+- **Reverse Proxy & Load Balancer:**  
+  It routes incoming requests to the correct server instances, balancing the load effectively.
+- **Additional Features:**  
+  Nginx also serves static content, compresses responses, handles SSL/TLS termination, and improves security.
+
+**Video References:**  
+- [Nginx for Beginners (Video)](https://www.youtube.com/watch?v=q8OleYuqntY)
+- [FreeCodeCamp - Nginx Tutorial](https://www.youtube.com/watch?v=9t9Mp0BGnyI)
+
+**Further Reading:**  
+- [Nginx Official Docs](https://nginx.org/en/docs/)
+
+---
+
+## 🏋️‍♂️ Week 4 Task (Optional): Enhance SnippetHub with Redis & Nginx Integration
+
+For your Week 3 SnippetHub project (or any similar project), try integrating the following improvements:
+
+1. **Redis Caching:**  
+   - Install and configure Redis locally or on your cloud provider.
+   - Modify your API endpoints to first check the Redis cache (e.g., for "all_snippets"). If there is a cache miss, fetch the data from the database, cache it, and then return the data.
+   - Make sure to delete or invalidate the cache keys whenever the associated data is modified to prevent stale data.
+
+2. **Nginx Reverse Proxy / Load Balancing:**  
+   - Split your backend into two services:
+     - **Auth Server:** Managing user authentication (ensure it scales horizontally if needed).
+     - **Service Server:** Handling snippet CRUD operations and other logic.
+   - Configure Nginx to act as a reverse proxy that routes requests to the appropriate server instances.
+   - Optionally, configure basic caching at the Nginx layer for static content.
+
+3. **(Bonus) Two-Factor Authentication:**  
+   - If not already implemented, enhance your Auth Server by adding 2FA (using SMS, email, or authenticator apps).
+
+### Deliverables 
+- **Updated README:** Document the changes you made, detailing your Redis caching and Nginx configuration, as well as any improvements in API response times.
+- **Configuration Files:** Include sample configuration files, such as:
+  
+```nginx title=nginx.conf
+# Example Nginx configuration for load balancing between Auth and Service servers
+http {
+    upstream auth_backend {
+        server auth1.example.com;
+        server auth2.example.com;
+    }
+
+    upstream service_backend {
+        server service1.example.com;
+        server service2.example.com;
+    }
+
+    server {
+        listen 80;
+
+        location /auth/ {
+            proxy_pass http://auth_backend;
+        }
+
+        location /api/ {
+            proxy_pass http://service_backend;
+        }
+
+        # Static file caching can also be configured here
+    }
+}
+```
+---
+
+That’s all for Week 4! Push your boundaries, experiment with these new configurations, and take your SnippetHub (or any project) to the next level with faster responses, reduced database load, and improved scalability.
+
+Good luck & happy coding!
